@@ -1,2 +1,2 @@
-# Computer-Audition
-What i did in class
+# Implenmentation of YIN algorithm
+
