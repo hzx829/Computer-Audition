@@ -1,2 +1,4 @@
-I put all the functions here, but without main function.
+I put all the functions here, but main function Pop_Onset_Beats.m.
+I use Pop.wav as my input audio singal.
 You can write your own main function(read audio files and set parameters) and use it to process audio files.
+You need Communications System Toolbox to run the synth_onset.m function,since I use function wgn(),which is in that toolbox.
