@@ -1,14 +1,18 @@
 function [S,beats] = opt_beat(beats,beat_num,lambda,tempoExpected,onsetStrength)
 %calculate S(B) by recursion
+%   input
+%
 % - beats           :beats sequence
 % - frame_num       :which frame is now
 % - lambda          :penalty coefficient
-% - tempoExpected   :the rough beat speacing(frame unit£©
+% - tempoExpected   :the rough beat speacing(frame unitÂ£Â©
 % - onsetStrength   :spectral onsetStrength
+%   output
+% - S       :score function depended on onsets and tempo
+% - beats   :beats sequence
 
 frame = length(onsetStrength);
     if beat_num == 1
-    %     p_final = 0;
         p_max = 0;
         for i = 1 : frame
             if onsetStrength(i) > p_max
