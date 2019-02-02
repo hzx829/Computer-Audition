@@ -1,0 +1,3 @@
+DoNMF.m is the main function.
+You have to put "piano.wav" "speech_train.wav" "noise_train.wav" "noisyspeech.wav" at current files.
+I also give "speech_test.wav" "noise_test.wav".So you can compare them to the results of seperation.
