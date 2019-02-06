@@ -13,8 +13,8 @@ We actually can use NMF to do surprivised learning. For a mix audio, we want to 
 Now for V_mix, we have V_mix = W_mix * Hmix. 
 We do not update W_mix when optimize.
 Finally we can get H_mix. 
-W1*H_mix[:r1,:] is magnitude spectrogram of sound 1. 
-W2*H_mix[r1:,:] is magnitude spectrogram of sound 2.
+W1 * H_mix[:r1,:] is magnitude spectrogram of sound 1. 
+W2 * H_mix[r1:,:] is magnitude spectrogram of sound 2.
 That is what i do in the homework.
 # 4.Hidden Markov Model for audio modeling
 
