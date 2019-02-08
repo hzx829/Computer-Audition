@@ -25,5 +25,10 @@ There are three variables.
 “loglikeMat” is the variable that stores the log-likelihood of each pitch hypothesis (state) in each time frame (observation). Given "loglikeMat", one way to estimate the pitch in each frame is to choose the pitch hypothesis that achieves the maximum log-likelihood in that frame. But this method assume pitches in every two frame are indenpdent, which is not reasonable. In fact, the result of this method is not good.
 "InitProb" and "TransMat" is other two given variables.The “initProb” is the initial probability of the pitch hypotheses learned from a lot of files of human speech. The “transMat” is the transition probability matrix learned from a lot of files of human speech. Given them, 
 we can use Viterbi algorithm to find the best path of states (pitch hypotheses across frames) that gives you the highest posterior probability. In this case, we assume the current pitch is related to the last one pitch. As we expect, the result becomes much better.
-# 5
+# 5.Singing voice separation with neural networks
+This homework is to do a traditional signal processing task:separating singing voice from single-channel mixture.First, we transform the singal into its STFT domain.Second, For the magnitude spectrum S_t at the t-th frame, we predict a mask M_t and then calculate the spectrum V_t of the singing voice as:
+V_t = M_t·S_t(element-wised multiplication)
+We then take such M_t as our generalized Wiener filtering to refine the estimated magnitude spectrogram of singing voice.Finally, we reconstruct the estimated singing voice using our estimated magnitude spectrum and the original mixture's phase with inverse STFT and overlap add. 
+I achieve 3 neural network in this homework:1.fully-connected layers. 2.Gated Recurrent Unit(GRU). 3.GRU with delay.
+
 
