@@ -1,5 +1,5 @@
 You can download data at https://sigsep.github.io/datasets/dsd100.html.
 Data is in ~/DSD100/.
 Model_fcn.py(fully-connected), Model_RNN.py(GRU without delays), and Model_delay.py(GRU with delays) are for training.
-separate_feedforward_fcn.py, separate_RNN.py, and separate_RNN_delay.py are for separation, 
+separate_fcn.py, separate_RNN.py, and separate_RNN_delay.py are for separation, 
 which will generate results of separation.
